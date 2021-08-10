@@ -1,7 +1,7 @@
 # nodejs
 Non blocking is the key improvement.
 The key of nodejs is the modules and callbacks.
-Does nodejs looks quite 'casual' to me comparing to java.
+Nodejs looks quite 'casual' to me comparing to java.
 
 cons:
 Does not check the variable type like java does, sometimes runs into runtime error.
