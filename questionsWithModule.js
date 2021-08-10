@@ -8,10 +8,21 @@ const questions = [
 
 
 
-collectAnswers(questions);
+const answerEvents = collectAnswers(questions);
 
-// collectAnswers(questions, answers => {
+// const answerEvents = collectAnswers(questions, answers => {
 //     console.log("Thank you for submitting your answers!");
 //     console.log(answers);
 //     process.exit();
 // });
+
+answerEvents.on("answer", answer => 
+console.log(`question answered: ${answer}`));
+
+answerEvents.on("complete", answers => {
+    console.log("Thank you for submitting your answers!");
+    console.log(answers);
+    process.exit();
+});
+
+answerEvents.on("complete", () => process.exit());
